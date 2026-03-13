@@ -15,7 +15,7 @@ let package = Package(
     targets: [
         .binaryTarget(
             name: "SecSDK",
-            url: "https://YOUR-DOMAIN-OR-GITHUB-RELEASES-URL/SecSDK.xcframework.zip",
+            url: "https://github.com/andreiliscan/SecSDKPackageZip/releases/download/0.0.1/SecSDK.xcframework.zip",
             checksum: "05191b73c1a003cb2c7cbffad31216c9cafccc54a872281996f5a815068661b8"
         )
     ]

@@ -1,22 +1,33 @@
-// swift-tools-version:5.9
+// swift-tools-version: 5.9
 import PackageDescription
 
 let package = Package(
-    name: "SecSDKPackage",
+    name: "PaymentsSDKPackage",
     platforms: [
         .iOS(.v13)
     ],
     products: [
         .library(
-            name: "SecSDK",
-            targets: ["SecSDK"]
+            name: "PaymentsSDK",
+            targets: ["PaymentsSDKWrapper"]
         )
+    ],
+    dependencies: [
+        .package(url: "https://github.com/andreiliscan/SecSDKPackageZip.git", from: "0.0.2")
     ],
     targets: [
         .binaryTarget(
-            name: "SecSDK",
-            url: "https://github.com/andreiliscan/SecSDKPackageZip/releases/download/0.0.1/SecSDK.xcframework.zip",
-            checksum: "05191b73c1a003cb2c7cbffad31216c9cafccc54a872281996f5a815068661b8"
+            name: "PaymentsSDKBinary",
+            url: "https://github.com/andreiliscan/PaymentsSDKPackage/releases/download/0.0.1/PaymentsSDK.xcframework.zip",
+            checksum: "41d01f8f3045c086e5d017dfda247d9235988302bb2e2a0f63b0171272a8c661"
+        ),
+        .target(
+            name: "PaymentsSDKWrapper",
+            dependencies: [
+                "PaymentsSDKBinary",
+                .product(name: "SecSDK", package: "SecSDKPackageZip")
+            ],
+            path: "Sources/PaymentsSDKWrapper"
         )
     ]
 )

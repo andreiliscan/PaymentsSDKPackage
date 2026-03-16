@@ -18,8 +18,8 @@ let package = Package(
     targets: [
         .binaryTarget(
             name: "PaymentsSDKBinary",
-            url: "https://github.com/andreiliscan/PaymentsSDKPackage/releases/download/0.0.1/PaymentsSDK.xcframework.zip",
-            checksum: "41d01f8f3045c086e5d017dfda247d9235988302bb2e2a0f63b0171272a8c661"
+            url: "https://github.com/andreiliscan/PaymentsSDKPackage/releases/download/0.0.2/PaymentsSDK.xcframework.zip",
+            checksum: "18b105d3b1276ddf695e472da07e6181431e36aa709ae6604c24efa3e8a9f2b6"
         ),
         .target(
             name: "PaymentsSDKWrapper",

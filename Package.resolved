@@ -1,0 +1,14 @@
+{
+  "pins" : [
+    {
+      "identity" : "secsdkpackagezip",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/andreiliscan/SecSDKPackageZip.git",
+      "state" : {
+        "revision" : "aa35c2b0f3ba7583605e6bfd3cfb5dfb7ac3021c",
+        "version" : "0.0.2"
+      }
+    }
+  ],
+  "version" : 2
+}
